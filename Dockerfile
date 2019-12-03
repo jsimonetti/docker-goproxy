@@ -25,5 +25,7 @@ COPY --from=BUILDER /build/app .
 # Expose port 8080 to the outside world
 EXPOSE 8080
 
+VOLUME [ "/cache" ]
+
 # Command to run the executable
 CMD [ "./app" ]
