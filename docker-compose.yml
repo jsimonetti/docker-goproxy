@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  goproxy:
+    container_name: go-proxy
+    restart: always
+    image: jsimonetti/goproxy:latest
+    ports:
+      - 8880:8080
+    volumes:
+      - ./cache:/cache
